@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:elevation="8dp"
+    android:focusable="true"
+    android:layout_margin="16dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#194658">
+
+        <RelativeLayout
+                android:id="@+id/shape_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_border_contact"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp" >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/myCardView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/roundedimag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/shape_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juliana Trindade"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(11)98456-8745"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor a enviar:"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/edtValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/edt_background"
+            android:text="R$ 0,00"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:textColor="#009898"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnHistoric"
+            app:layout_constraintTop_toBottomOf="@+id/edtValue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/btn_background"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="ENVIAR"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
