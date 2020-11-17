@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/linear_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_transfers_history"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="HISTÓRICO DE ENVIOS"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/CustomToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_graph_transfers_history"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_transfers_history"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rv_contacts_transfers_history"
+        app:layout_constraintVertical_bias="0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        tools:listitem="@layout/item_adapter_transfer_history" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contacts_transfers_history"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_graph_transfers_history"
+        app:layout_constraintVertical_bias="0"
+        tools:listitem="@layout/item_adapter_contact" />
+
+    <View
+        android:id="@+id/line_below"
+        app:layout_constraintTop_toBottomOf="@+id/rv_contacts_transfers_history"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#005C63"
+        android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
