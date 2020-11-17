@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NeonApp</string>
+    <string name="tv_send_money">ENVIAR DINHEIRO</string>
+    <string name="tv_transfers_history">Histórico de envios</string>
+    <string name="tv_value_to_send">Valor a enviar:</string>
+    <string name="tv_send">ENVIAR</string>
 </resources>
